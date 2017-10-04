@@ -21,7 +21,7 @@ export function mapPosts (ghostData) {
   let posts = ghostData.posts;
 
   return posts.map((post) => {
-    let body = extendEmbeddedReferences(ghostData.blogHost, post.markdown);
+    let body = extendEmbeddedReferences(ghostData.blogHost, post.mobiledoc);
 
     return {
       title: post.title,
