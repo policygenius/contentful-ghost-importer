@@ -23,6 +23,8 @@ export function mapPosts (ghostData) {
   return posts.map((post) => {
     let body = extendEmbeddedReferences(ghostData.blogHost, post.mobiledoc);
 
+    console.log("Migrating:", post.title)
+
     return {
       title: post.title,
       slug: post.slug,
